@@ -1,0 +1,335 @@
+.flex-row  {
+  display: flex;
+  align-items: center;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.border-radius-left {
+  border-radius: 12.5px 0 0 12.5px;
+  border: 1px solid #777;
+  border-right: none;
+}
+.border-radius-right {
+  border-radius: 0 12.5px 12.5px 0;
+  border: 1px solid #777;
+  border-left: none;
+}
+.img-icon {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+body {
+  margin: 0;
+  font-family: "segoe UI", sans-serif;
+  font-size: 12pt;
+  min-height: 100vh;
+  background-color: @back2color;
+  button:hover {
+    cursor: pointer;
+  }
+  a {
+    text-decoration: none;
+  }
+  input:focus, button:focus {
+    outline: none;
+  }
+  input::-webkit-input-placeholder {
+    background: url('../svg_images/more.svg') no-repeat 8px;
+  }
+  .field {
+    flex: 0 0 250px;
+    text-indent: 20pt;
+    .border-radius-left ;
+    background-image: linear-gradient(#e1dee5 0%, #fafffb 30%, #fafffb 75%,#e1dee5 100%);
+  }
+  .action {
+    height: 19px;
+    .border-radius-right;
+    width: 30px;
+    background-image: linear-gradient(#e1dee5 0%, #fafffb 30%, #fafffb 75%,#e1dee5 100%);
+    img {
+      height: 100%;
+    }
+  }
+  header {
+    text-shadow: 0 1px 2px #000;
+    line-height: 100%;
+    flex: 0 0 45px;
+    width: 100vw;
+    min-width: @fieldWidth;
+    background-image: linear-gradient(darken(@back1color, -8%) 0%, @back1color 50%, darken(@back1color, -10%) 100%);
+    border-bottom: 1px solid #FFF;
+    .UserPage a:first-child {
+      border-right: 1.3px solid darken(@back1color, 10%);
+    }
+    section {
+      flex: 0 0 @fieldWidth;
+      justify-content: space-between;
+      margin: auto;
+    }
+    a {
+      color: @headerTextColor;
+      padding: 0 7px;
+    }
+    .search a::before {
+      content: "f";
+      font-size: 16pt;
+      font-weight: 500;
+      padding-right: 20px;
+    }
+    img {
+      .img-icon
+    }
+  }
+  /* всё остальное поле*/
+  #contentfield {
+    width: @fieldWidth;
+    flex-grow: 1;
+    align-items: flex-start;
+    margin: auto;
+    a {color: black;}
+    &>div:first-child {
+      flex: 0 0 700px;
+      height: calc(~"100vh - 86px");
+      box-sizing: border-box;
+      margin: @marginTop 0;
+      padding-right: @marginRight;
+      border-right: solid 1px darken(@back2color, 8%);
+      box-shadow: 1px 0 0 #fff;
+      #menu {
+        & a::before {
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          background: no-repeat 10% 50%;
+          text-align: center;
+          line-height: 45px;
+        }
+        &>a::before {
+          content: "";
+          width: @left_column_width;
+          height: 60px;
+          background: url("../svg_images/plus.svg") no-repeat 50% 56%;
+          background-size: 30px 30px;
+        }
+        nav {
+          width: 100%;
+          background-color: lighten(@back2color, 5%);
+          box-shadow: 0 1px 6px #aaa;
+          position: relative;
+          &::before {
+            content: " " ;
+            border: 10px solid lighten(@back2color, 5%);
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 10px solid transparent;
+            position: absolute; left: -20px; top: 22px;
+          }
+        }
+        div {
+          width: 25%;
+          margin: 10px 0;
+          border-right: 2px solid darken(@back2color, 10%);
+          box-shadow: 1px 0 0 0 #fff;
+          &:first-child a::before {
+            background-image: url("../svg_images/status.svg");
+            content: "Status";
+            background-size: 25px 25px;
+          }
+          &:nth-child(2) a::before {
+            background-image: url("../svg_images/photos.svg");
+            content: "Photos";
+            background-size: 25px 25px;
+          }
+          &:nth-child(3) a::before {
+            background-image: url("../svg_images/sound.svg");
+            content: "Sound";
+            background-size: 25px 25px;
+          }
+          &:last-child {
+            border: none;
+            box-shadow: none;
+            & a::before {
+              background-image: url("../svg_images/link.svg");
+              content: "Link";
+              background-size: 25px 25px;
+            }
+          }
+        }
+      }
+      .comment {
+        margin-top: @marginTop;
+        align-items: flex-start;
+        &>div:first-child {
+          flex: 0 0 @left_column_width;
+          height: 100%;
+          padding-right: 10px;
+          box-sizing: border-box;
+          font-size: 10pt;
+          text-align: center;
+          font-weight: 500;
+          Figure {
+            margin: 0;
+          }
+          img {
+            width: 75px;
+            border-radius: 50%;
+          }
+          p {
+            margin: 10px 0;
+            color: darken(@back2color, 25%);
+          }
+          button {
+            background: none;
+            border: none;
+            margin: auto;
+            width: 60px;
+            img {
+              width: 30px;
+            }
+          }
+        }
+        .commentation {
+          width: 100%;
+          height: 200px;
+          background-color: lighten(@back2color, 5%);
+          box-shadow: 0 1px 6px #aaa;
+          position: relative;
+          &::before {
+            content: " " ;
+            border: 10px solid lighten(@back2color, 5%);
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 10px solid transparent;
+            position: absolute; left: -20px; top: 22px;
+          }
+          &>div:first-child {
+            margin: 0 15px;
+            width: 539px;
+            height: 80%;
+            flex-grow: 0;
+            flex-shrink: 0;
+            overflow: auto;
+            border-bottom: 2px solid darken(@back2color, 10%);
+          }
+          &>div:last-child {
+            margin: 10px 20px;
+            justify-content: center;
+            a {
+              margin-right: 20px;
+            }
+            & button:not(:first-of-type) {
+              padding: 0 15px;
+              flex-basis: 60px;
+              background: none;
+              border: none;
+              border-radius: 0px;
+              height: 15px;
+              border-right: 2px solid darken(@back2color, 10%);
+              img {
+                height: 15px;
+                width: 15px;
+              }
+            }
+            & button:first-of-type {
+              margin-right: 10px;
+              img {
+                height: 15px;
+                width: 15px;
+              }
+            }
+            & button:last-of-type {
+              border: none;
+            }
+          }
+          h4 {
+            margin: 10px 0;
+          }
+          p {
+            margin: 0;
+          }
+        }
+      }
+      .commentation img {
+        .img-icon
+      }
+    }
+    &>div:last-child {
+      flex: 0 0 260px;
+      margin: 20px 0;
+      ul {
+        padding: 0;
+        margin: 0 0 @marginTop @marginRight;
+        list-style: none;
+        li {
+          background-color: lighten(@back2color, 5%);
+          margin-bottom: 15px;
+          box-shadow: 0 1px 6px #aaa;
+          span {
+            width: 100%;
+          }
+          p {
+            margin: 3px 0;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            font-size: 11pt;
+          }
+          img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            margin: 15px 10px;
+          }
+        }
+      }
+      ul:first-of-type {
+        border-bottom: 1px solid darken(@back2color, 10%);
+        box-shadow: 0 2px 1px -1px #fff;
+        box-sizing: border-box;
+        li:last-child {margin-bottom: @marginTop;}
+        p:last-of-type {
+          color: darken(@back2color, 25%);
+        }
+      }
+      ul:last-of-type {
+        margin-top: 0;
+        margin-bottom: 0;
+        box-shadow: 0 1px 6px #aaa;
+        li {
+          box-shadow: none;
+          margin: 0;
+          p {
+            width: 100%;
+          }
+          span {
+            margin: 3px;
+            width: 30px;
+            height: 30px;
+          }
+          .online {
+            background: url("../svg_images/circlegreen.svg")no-repeat 50% 50%;
+            background-size: 10px 10px ;
+          }
+          .offline {
+            background: url("../svg_images/circlered.svg")no-repeat 50% 50%;
+            background-size: 10px 10px ;
+          }
+          img {
+            height: 30px;
+            width: 30px;
+            margin: 5px 15px;
+          }
+        }
+      }
+    }
+  }
+
+
+
+}
+
+

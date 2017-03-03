@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  font-family: "segoe UI", sans-serif;
+  font-size: 14pt;
+  display: flex;
+}
+body header {
+  display: flex;
+  flex-direction: row;
+  flex: 0 0 900px;
+  margin: auto;
+  background: #0000ed;
+  justify-content: space-around;
+}
+body header a {
+  color: #fff;
+}
+body a {
+  text-decoration: none;
+}
+#textBlock {
+  color: red;
+}
+#textBlock span {
+  font-weight: bold;
+  height: 60px;
+  border: 1px solid red;
+  line-height: 60px;
+  width: 120px;
+  display: inline-block;
+}
+@media only screen and (max-width: 320px) {
+  #textBlock span {
+    border: 1px solid #ff0;
+    line-height: 100px;
+    width: 100px;
+    display: inline-block;
+  }
+}
+#textBlock span::after {
+  content: "123";
+  color: #800000;
+}
+#textBlock span:hover {
+  color: blue;
+}
+#textBlock span:hover::after {
+  color: #ff00ff;
+}

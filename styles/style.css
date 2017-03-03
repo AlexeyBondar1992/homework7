@@ -1,0 +1,357 @@
+.flex-row {
+  display: flex;
+  align-items: center;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.border-radius-left {
+  border-radius: 12.5px 0 0 12.5px;
+  border: 1px solid #777;
+  border-right: none;
+}
+.border-radius-right {
+  border-radius: 0 12.5px 12.5px 0;
+  border: 1px solid #777;
+  border-left: none;
+}
+.img-icon {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+body {
+  margin: 0;
+  font-family: "segoe UI", sans-serif;
+  font-size: 12pt;
+  min-height: 100vh;
+  background-color: #eee;
+  /* всё остальное поле*/
+}
+body button:hover {
+  cursor: pointer;
+}
+body a {
+  text-decoration: none;
+}
+body input:focus,
+body button:focus {
+  outline: none;
+}
+body input::-webkit-input-placeholder {
+  background: url('../svg_images/more.svg') no-repeat 8px;
+}
+body .field {
+  flex: 0 0 250px;
+  text-indent: 20pt;
+  border-radius: 12.5px 0 0 12.5px;
+  border: 1px solid #777;
+  border-right: none;
+  background-image: linear-gradient(#e1dee5 0%, #fafffb 30%, #fafffb 75%, #e1dee5 100%);
+}
+body .action {
+  height: 19px;
+  border-radius: 0 12.5px 12.5px 0;
+  border: 1px solid #777;
+  border-left: none;
+  width: 30px;
+  background-image: linear-gradient(#e1dee5 0%, #fafffb 30%, #fafffb 75%, #e1dee5 100%);
+}
+body .action img {
+  height: 100%;
+}
+body header {
+  text-shadow: 0 1px 2px #000;
+  line-height: 100%;
+  flex: 0 0 45px;
+  width: 100vw;
+  min-width: 960px;
+  background-image: linear-gradient(#4d76c4 0%, #3A62AE 50%, #557cc6 100%);
+  border-bottom: 1px solid #FFF;
+}
+body header .UserPage a:first-child {
+  border-right: 1.3px solid #2d4c88;
+}
+body header section {
+  flex: 0 0 960px;
+  justify-content: space-between;
+  margin: auto;
+}
+body header a {
+  color: #fff;
+  padding: 0 7px;
+}
+body header .search a::before {
+  content: "f";
+  font-size: 16pt;
+  font-weight: 500;
+  padding-right: 20px;
+}
+body header img {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+body #contentfield {
+  width: 960px;
+  flex-grow: 1;
+  align-items: flex-start;
+  margin: auto;
+}
+body #contentfield a {
+  color: black;
+}
+body #contentfield > div:first-child {
+  flex: 0 0 700px;
+  height: calc(100vh - 86px);
+  box-sizing: border-box;
+  margin: 20px 0;
+  padding-right: 30px;
+  border-right: solid 1px #dadada;
+  box-shadow: 1px 0 0 #fff;
+}
+body #contentfield > div:first-child #menu a::before {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: no-repeat 10% 50%;
+  text-align: center;
+  line-height: 45px;
+}
+body #contentfield > div:first-child #menu > a::before {
+  content: "";
+  width: 100px;
+  height: 60px;
+  background: url("../svg_images/plus.svg") no-repeat 50% 56%;
+  background-size: 30px 30px;
+}
+body #contentfield > div:first-child #menu nav {
+  width: 100%;
+  background-color: #fbfbfb;
+  box-shadow: 0 1px 6px #aaa;
+  position: relative;
+}
+body #contentfield > div:first-child #menu nav::before {
+  content: " ";
+  border: 10px solid #fbfbfb;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid transparent;
+  position: absolute;
+  left: -20px;
+  top: 22px;
+}
+body #contentfield > div:first-child #menu div {
+  width: 25%;
+  margin: 10px 0;
+  border-right: 2px solid #d5d5d5;
+  box-shadow: 1px 0 0 0 #fff;
+}
+body #contentfield > div:first-child #menu div:first-child a::before {
+  background-image: url("../svg_images/status.svg");
+  content: "Status";
+  background-size: 25px 25px;
+}
+body #contentfield > div:first-child #menu div:nth-child(2) a::before {
+  background-image: url("../svg_images/photos.svg");
+  content: "Photos";
+  background-size: 25px 25px;
+}
+body #contentfield > div:first-child #menu div:nth-child(3) a::before {
+  background-image: url("../svg_images/sound.svg");
+  content: "Sound";
+  background-size: 25px 25px;
+}
+body #contentfield > div:first-child #menu div:last-child {
+  border: none;
+  box-shadow: none;
+}
+body #contentfield > div:first-child #menu div:last-child a::before {
+  background-image: url("../svg_images/link.svg");
+  content: "Link";
+  background-size: 25px 25px;
+}
+body #contentfield > div:first-child .comment {
+  margin-top: 20px;
+  align-items: flex-start;
+}
+body #contentfield > div:first-child .comment > div:first-child {
+  flex: 0 0 100px;
+  height: 100%;
+  padding-right: 10px;
+  box-sizing: border-box;
+  font-size: 10pt;
+  text-align: center;
+  font-weight: 500;
+}
+body #contentfield > div:first-child .comment > div:first-child Figure {
+  margin: 0;
+}
+body #contentfield > div:first-child .comment > div:first-child img {
+  width: 75px;
+  border-radius: 50%;
+}
+body #contentfield > div:first-child .comment > div:first-child p {
+  margin: 10px 0;
+  color: #aeaeae;
+}
+body #contentfield > div:first-child .comment > div:first-child button {
+  background: none;
+  border: none;
+  margin: auto;
+  width: 60px;
+}
+body #contentfield > div:first-child .comment > div:first-child button img {
+  width: 30px;
+}
+body #contentfield > div:first-child .comment .commentation {
+  width: 100%;
+  height: 200px;
+  background-color: #fbfbfb;
+  box-shadow: 0 1px 6px #aaa;
+  position: relative;
+}
+body #contentfield > div:first-child .comment .commentation::before {
+  content: " ";
+  border: 10px solid #fbfbfb;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid transparent;
+  position: absolute;
+  left: -20px;
+  top: 22px;
+}
+body #contentfield > div:first-child .comment .commentation > div:first-child {
+  margin: 0 15px;
+  width: 539px;
+  height: 80%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  overflow: auto;
+  border-bottom: 2px solid #d5d5d5;
+}
+body #contentfield > div:first-child .comment .commentation > div:last-child {
+  margin: 10px 20px;
+  justify-content: center;
+}
+body #contentfield > div:first-child .comment .commentation > div:last-child a {
+  margin-right: 20px;
+}
+body #contentfield > div:first-child .comment .commentation > div:last-child button:not(:first-of-type) {
+  padding: 0 15px;
+  flex-basis: 60px;
+  background: none;
+  border: none;
+  border-radius: 0px;
+  height: 15px;
+  border-right: 2px solid #d5d5d5;
+}
+body #contentfield > div:first-child .comment .commentation > div:last-child button:not(:first-of-type) img {
+  height: 15px;
+  width: 15px;
+}
+body #contentfield > div:first-child .comment .commentation > div:last-child button:first-of-type {
+  margin-right: 10px;
+}
+body #contentfield > div:first-child .comment .commentation > div:last-child button:first-of-type img {
+  height: 15px;
+  width: 15px;
+}
+body #contentfield > div:first-child .comment .commentation > div:last-child button:last-of-type {
+  border: none;
+}
+body #contentfield > div:first-child .comment .commentation h4 {
+  margin: 10px 0;
+}
+body #contentfield > div:first-child .comment .commentation p {
+  margin: 0;
+}
+body #contentfield > div:first-child .commentation img {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+body #contentfield > div:last-child {
+  flex: 0 0 260px;
+  margin: 20px 0;
+}
+body #contentfield > div:last-child ul {
+  padding: 0;
+  margin: 0 0 20px 30px;
+  list-style: none;
+}
+body #contentfield > div:last-child ul li {
+  background-color: #fbfbfb;
+  margin-bottom: 15px;
+  box-shadow: 0 1px 6px #aaa;
+}
+body #contentfield > div:last-child ul li span {
+  width: 100%;
+}
+body #contentfield > div:last-child ul li p {
+  margin: 3px 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 11pt;
+}
+body #contentfield > div:last-child ul li img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin: 15px 10px;
+}
+body #contentfield > div:last-child ul:first-of-type {
+  border-bottom: 1px solid #d5d5d5;
+  box-shadow: 0 2px 1px -1px #fff;
+  box-sizing: border-box;
+}
+body #contentfield > div:last-child ul:first-of-type li:last-child {
+  margin-bottom: 20px;
+}
+body #contentfield > div:last-child ul:first-of-type p:last-of-type {
+  color: #aeaeae;
+}
+body #contentfield > div:last-child ul:last-of-type {
+  margin-top: 0;
+  margin-bottom: 0;
+  box-shadow: 0 1px 6px #aaa;
+}
+body #contentfield > div:last-child ul:last-of-type li {
+  box-shadow: none;
+  margin: 0;
+}
+body #contentfield > div:last-child ul:last-of-type li p {
+  width: 100%;
+}
+body #contentfield > div:last-child ul:last-of-type li span {
+  margin: 3px;
+  width: 30px;
+  height: 30px;
+}
+body #contentfield > div:last-child ul:last-of-type li .online {
+  background: url("../svg_images/circlegreen.svg") no-repeat 50% 50%;
+  background-size: 10px 10px ;
+}
+body #contentfield > div:last-child ul:last-of-type li .offline {
+  background: url("../svg_images/circlered.svg") no-repeat 50% 50%;
+  background-size: 10px 10px ;
+}
+body #contentfield > div:last-child ul:last-of-type li img {
+  height: 30px;
+  width: 30px;
+  margin: 5px 15px;
+}
+body #contentfield > div:last-child ul li:hover {
+  background-color: #bbbbbb;
+}
+body #contentfield > div:last-child ul li:hover p:first-of-type {
+  color: #FFF;
+}
+body #contentfield > div:first-child #menu div:hover {
+  background-color: #bbbbbb;
+}
+body #contentfield > div:first-child #menu div:hover a::before {
+  color: #fff;
+}
